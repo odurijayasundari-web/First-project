@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html><head><title>Temp Converter</title>
+<style>body{font-family:Arial;display:flex;justify-content:center;align-items:center;min-height:100vh;background:#e3f2fd}.box{background:#fff;padding:30px;border-radius:15px;width:300px}input,select,button{width:100%;padding:10px;margin:8px 0}button{background:#0984e3;color:white;border:none}</style>
+</head><body>
+<div class="box"><h2>Temperature Converter</h2>
+<input id="temp" type="number" placeholder="Enter temp">
+<select id="unit"><option value="c">Celsius</option><option value="f">Fahrenheit</option><option value="k">Kelvin</option></select>
+<button onclick="convert()">Convert</button><div id="result"></div></div>
+<script>function convert(){let t=parseFloat(temp.value);let u=unit.value;let c,f,k;if(u=='c'){c=t;f=t*9/5+32;k=t+273.15}else if(u=='f'){f=t;c=(t-32)*5/9;k=c+273.15}else{k=t;c=t-273.15;f=c*9/5+32}result.innerHTML=`C:${c.toFixed(2)}<br>F:${f.toFixed(2)}<br>K:${k.toFixed(2)}`}</script>
+</body></html>
